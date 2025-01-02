@@ -2,8 +2,6 @@ fastapi
 numpy
 Pillow
 python-version
-torch
-torchvision
 typing_extensions
 uvicorn
 python-multipart
