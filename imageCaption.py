@@ -8,7 +8,7 @@ import base64
 app = FastAPI()
 
 # Load the pre-trained YOLOv5 model (small version 'yolov5s')
-model = torch.hub.load('ultralytics/yolov5', 'yolov5s')
+model = torch.hub.load('ultralytics/yolov5', 'yolov5s',trust_repo=True)
 
 # Pydantic model to accept base64 image data
 class ImagePayload(BaseModel):
