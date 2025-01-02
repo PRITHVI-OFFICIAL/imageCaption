@@ -6,7 +6,7 @@ from PIL import Image
 import io
 import base64
 
-
+app = FastAPI(title="Image Caption Generator")
 # Pydantic model to accept base64 image data
 class ImagePayload(BaseModel):
     image: str  # base64 encoded image
@@ -14,8 +14,6 @@ class ImagePayload(BaseModel):
 @app.get("/health")
 async def health_check():
     return {"status": "healthy", "message": "Object detection service is running"}
-
-app = FastAPI(title="Image Caption Generator")
 
 # Initialize the model and processor
 processor = BlipProcessor.from_pretrained("Salesforce/blip-image-captioning-base")
