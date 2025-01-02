@@ -9,7 +9,7 @@ app = FastAPI()
 
 # Load the pre-trained YOLOv5 model (small version 'yolov5s')
 torch.hub._validate_not_a_forked_repo=lambda a,b,c: True
-model = torch.hub.load('ultralytics/yolov5', 'yolov5s',trust_repo=True)
+model = torch.hub.load('ultralytics/yolov5', 'yolov5s')
 
 # Pydantic model to accept base64 image data
 class ImagePayload(BaseModel):
