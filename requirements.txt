@@ -8,3 +8,4 @@ typing_extensions
 uvicorn
 python-multipart
 matplotlib
+opencv-python
